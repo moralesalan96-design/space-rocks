@@ -3,14 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_7o3gy"]
 
 [node name="PlayerUi" type="PanelContainer" unique_id=1997977121]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 55.0
-offset_right = -49.0
-offset_bottom = -678.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_right = 46.0
+offset_bottom = 91.0
 grow_horizontal = 2
-grow_vertical = 2
 
 [node name="VBox" type="VBoxContainer" parent="." unique_id=2134550350]
 layout_mode = 2
