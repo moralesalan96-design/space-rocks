@@ -1,11 +1,16 @@
 extends Area2D
+class_name Bullet
 
+var speed: float = 60.0 #px / sec.
+var lifespan: float = 2.0 # seconds till end. 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	
+	
+	
+	position.x += cos(rotation) * delta * speed
+	position.y += sin(rotation) * delta * speed
+	
+	lifespan -= delta
+	if lifespan < 0.0:
+		queue_free()

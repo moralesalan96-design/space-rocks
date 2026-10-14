@@ -1,6 +1,8 @@
 extends Area2D
 class_name Ship
 
+const Bullet: PackedScene = preload("res://Bullet/Bullet.tscn")
+
 var turn_speed: float = 500 # degrees / sec.
 
 func _process(delta: float) -> void:
@@ -15,4 +17,7 @@ func _process(delta: float) -> void:
 
 func fire():
 	print("Fire!")
-	
+	var bullet: Bullet = Bullet.instantiate()
+	bullet.position = position
+	bullet.rotation = rotation
+	get_parent().add_child(bullet)
