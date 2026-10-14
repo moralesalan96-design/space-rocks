@@ -1,9 +1,27 @@
 [gd_scene format=3 uid="uid://s2abnxf5ptfw"]
 
-[node name="PlayerUi" type="Control" unique_id=2145010982]
-layout_mode = 3
+[ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_7o3gy"]
+
+[node name="PlayerUi" type="PanelContainer" unique_id=1997977121]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 55.0
+offset_right = -49.0
+offset_bottom = -678.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=2134550350]
+layout_mode = 2
+
+[node name="ScoreUI" type="Label" parent="VBox" unique_id=1840148671]
+layout_mode = 2
+text = "0123456789"
+
+[node name="HBox" type="HBoxContainer" parent="VBox" unique_id=914428615]
+layout_mode = 2
+
+[node name="Life" type="TextureRect" parent="VBox/HBox" unique_id=1488578878]
+layout_mode = 2
+texture = ExtResource("1_7o3gy")
