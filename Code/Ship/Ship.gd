@@ -1,7 +1,7 @@
 extends Area2D
 class_name Ship
 
-var turn_speed: float = 300 # degrees / sec.
+var turn_speed: float = 500 # degrees / sec.
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("fire"):
