@@ -5,12 +5,10 @@ var speed: float = 60.0 #px / sec.
 var lifespan: float = 2.0 # seconds till end. 
 
 func _process(delta: float) -> void:
+	position.x += cos(rotation+PI) * delta * speed
+	position.y += sin(rotation+PI) * delta * speed
 	
-	
-	
-	position.x += cos(rotation) * delta * speed
-	position.y += sin(rotation) * delta * speed
-	
+	# Countdown.
 	lifespan -= delta
 	if lifespan < 0.0:
 		queue_free()
