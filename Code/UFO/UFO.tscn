@@ -31,3 +31,4 @@ texture = ExtResource("2_dw4pw")
 autostart = true
 
 [node name="FireTimer" type="Timer" parent="." unique_id=2135482605]
+wait_time = 0.484

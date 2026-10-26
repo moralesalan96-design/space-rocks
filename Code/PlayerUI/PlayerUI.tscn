@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://s2abnxf5ptfw"]
 
-[ext_resource type="Texture2D" uid="uid://cmp8dhqeo5lyx" path="res://Main/icon.png" id="1_7o3gy"]
+[ext_resource type="Script" uid="uid://bi3eyqu3dc678" path="res://PlayerUI/PlayerUi.gd" id="1_4n4wi"]
+[ext_resource type="PackedScene" uid="uid://bovuvgb2fysqb" path="res://PlayerUI/assets/life.tscn" id="2_4n4wi"]
 
-[node name="PlayerUi" type="PanelContainer" unique_id=1997977121]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -46.0
-offset_right = 46.0
-offset_bottom = 91.0
+[node name="PlayerUI" type="PanelContainer" unique_id=1997977121]
+anchors_preset = -1
+anchor_left = 0.45800003
+anchor_right = 0.45800003
+offset_left = -43.000015
+offset_right = 156.99998
+offset_bottom = 93.0
 grow_horizontal = 2
+script = ExtResource("1_4n4wi")
 
 [node name="VBox" type="VBoxContainer" parent="." unique_id=2134550350]
 layout_mode = 2
@@ -18,9 +20,11 @@ layout_mode = 2
 layout_mode = 2
 text = "0123456789"
 
-[node name="HBox" type="HBoxContainer" parent="VBox" unique_id=914428615]
+[node name="LivesUI" type="HBoxContainer" parent="VBox" unique_id=914428615]
 layout_mode = 2
 
-[node name="Life" type="TextureRect" parent="VBox/HBox" unique_id=1488578878]
+[node name="Life" parent="VBox/LivesUI" unique_id=863133513 instance=ExtResource("2_4n4wi")]
 layout_mode = 2
-texture = ExtResource("1_7o3gy")
+
+[node name="Life2" parent="VBox/LivesUI" unique_id=1113358515 instance=ExtResource("2_4n4wi")]
+layout_mode = 2
