@@ -5,7 +5,7 @@ const BULLET = preload("res://Bullet/Bullet.tscn")
 @onready var timer: Timer = $Timer
 @onready var fire
 
-var speed:float = 200.0 # px /sec.
+var speed: float = 200.0 # px /sec.
 var velocity_y: float = 0.0
 
 func _ready() -> void:
@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	position.x += speed * delta
-	postion.y += velocity_y * delta
+	position.y += velocity_y * delta
 	
 	var height = get_viewport().size.y
 	if position.y < 0:
@@ -31,7 +31,7 @@ func on_fired():
 	get_parent().add_child(bullet)
 
 func on_timeout():
-	if velocity.y != 0.0:
+	if velocity_y != 0.0:
 		velocity_y = 0
 	else:
 		var rando = randi_range(0, 1)

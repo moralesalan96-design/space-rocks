@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://s2abnxf5ptfw" path="res://PlayerUI/PlayerUI.tscn" id="6_u2i7p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ejki1"]
-radius = 24.020824
+radius = 14.56022
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ejki1"]
 

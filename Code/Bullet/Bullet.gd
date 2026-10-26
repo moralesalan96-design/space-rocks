@@ -1,4 +1,4 @@
-extends Area2D
+extends ScreenWrapper
 class_name Bullet
 
 var speed: float = 600.0 #px / sec.

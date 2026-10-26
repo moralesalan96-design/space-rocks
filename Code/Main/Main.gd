@@ -2,9 +2,9 @@ extends Node
 class_name Main
 
 const UfO = preload("res://UFO/UFO.tscn")
-@onready car ufo_timer: Timer = $UfoTimer
+@onready var ufo_timer: Timer = $UfoTimer
 
-funct _read() -> void:
+func _read() -> void:
 	ufo_timer.timeout.connect(on_ufo_spawned)
 	
 func _process(delta: float) -> void:
