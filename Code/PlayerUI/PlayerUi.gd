@@ -2,9 +2,12 @@ extends PanelContainer
 class_name PlayerUI
 
 const LIFE = preload("res://PlayerUI/assets/life.tscn")
+const SHIP = preload("res://Ship/Ship.tscn")
 
 @onready var score_ui: Label = $VBox/ScoreUI
 @onready var lives_ui: HBoxContainer = $VBox/LivesUI
+
+
 
 var score: int = 0 
 var lives: int = 3
@@ -30,3 +33,8 @@ func build_lives():
 	for l in lives:
 		var life = LIFE.instantiate()
 		lives_ui.add_child(life)
+		
+func spawn_ship():
+	var ship = SHIP.instantiate()
+	ship.player = self
+	add_child(ship)

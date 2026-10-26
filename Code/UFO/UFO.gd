@@ -3,7 +3,7 @@ class_name UFO
 
 const BULLET = preload("res://Bullet/Bullet.tscn")
 @onready var timer: Timer = $Timer
-@onready var fire
+@onready var fire_timer: Timer = $FireTimer
 
 var speed: float = 200.0 # px /sec.
 var velocity_y: float = 0.0

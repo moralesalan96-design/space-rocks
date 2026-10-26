@@ -9,7 +9,7 @@ const PLAYER_UI = preload("res://PlayerUI/PlayerUI.tscn")
 
 var players: Array[PlayerUI]
 
-func _read() -> void:
+func _ready() -> void:
 	ufo_timer.timeout.connect(on_ufo_spawned)
 	spawn_rocks(6)
 	spawn_player()

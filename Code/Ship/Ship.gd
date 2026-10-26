@@ -3,7 +3,10 @@ class_name Ship
 
 const Bullet: PackedScene = preload("res://Bullet/Bullet.tscn")
 
+
 var turn_speed: float = 500 # degrees / sec.
+var thrust_power: float = 10 #multiplier.px/ sec
+var velocity: Vector2 = Vector2.ZERO
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("fire"):
@@ -18,6 +21,7 @@ func _process(delta: float) -> void:
 func fire():
 	print("Fire!")
 	var bullet: Bullet = Bullet.instantiate()
-	bullet.position = position
+	bullet.player = player 
+	bullet.position = self.position
 	bullet.rotation = rotation
 	get_parent().add_child(bullet)

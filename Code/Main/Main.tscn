@@ -9,5 +9,5 @@ script = ExtResource("1")
 [node name="Ship" parent="." unique_id=1440971799 instance=ExtResource("4_hh5pf")]
 position = Vector2(228, 332)
 
-[node name="Ufo Timer" type="Timer" parent="." unique_id=1227431596]
+[node name="UfoTimer" type="Timer" parent="." unique_id=1227431596]
 autostart = true
