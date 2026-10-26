@@ -15,7 +15,11 @@ var lives: int = 3
 func _ready() -> void:
 	update_score(1)
 	update_lives(3) # 6
-
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("launch_ship"):
+		spawn_ship()
+		
 func update_score(delta_score):
 	score += delta_score
 	score_ui.text = str(score)
