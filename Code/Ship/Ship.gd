@@ -3,8 +3,9 @@ class_name Ship
 
 const Bullet: PackedScene = preload("res://Bullet/Bullet.tscn")
 
+var player: PlayerUI
 
-var turn_speed: float = 500 # degrees / sec.
+var turn_speed: float = 180 # degrees / sec.
 var thrust_power: float = 10 #multiplier.px/ sec
 var velocity: Vector2 = Vector2.ZERO
 
@@ -13,15 +14,26 @@ func _process(delta: float) -> void:
 		fire()
 
 	if Input.is_action_just_pressed("turn_cw"): 
-		rotation_degrees += turn_speed * delta
+		rotation_degrees -= turn_speed * delta
 
 	if Input.is_action_just_pressed("turn_ccw"):
 		rotation_degrees += turn_speed * delta
+
+	if Input.is_action_just_pressed("thrust"):
+		# Snake like movement.
+		velocity.x += cos(rotation - PI /2) * thrust_power
+		velocity.y += sin(rotation - PI /2) * thrust_power
+
+	# TODO: Fix max velocity.
+	#var c: float = 1000
+	#velocity = velocity.clamp(Vector2(-c, c), Vector2(-c, c))
+	position += velocity * delta
+	super._process(delta)
 
 func fire():
 	print("Fire!")
 	var bullet: Bullet = Bullet.instantiate()
 	bullet.player = player 
-	bullet.position = self.position
+	bullet.position = position
 	bullet.rotation = rotation
 	get_parent().add_child(bullet)
