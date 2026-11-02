@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	#var c: float = 1000
 	#velocity = velocity.clamp(Vector2(-c, c), Vector2(-c, c))
 	position += velocity * delta
-	super._process(delta)
+	
 
 func fire():
 	print("Fire!")

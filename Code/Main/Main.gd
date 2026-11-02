@@ -14,11 +14,7 @@ func _ready() -> void:
 	spawn_rocks(6)
 	spawn_player()
 	
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("pause"):
-		# FIXME: Not pausing, testing with quit().
-		#get_tree().paused = true
-		get_tree().quit()
+
 
 func just_score(delta_score, player):
 	players[0].update_score(delta_score)

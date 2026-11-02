@@ -7,8 +7,6 @@ const SHIP = preload("res://Ship/Ship.tscn")
 @onready var score_ui: Label = $VBox/ScoreUI
 @onready var lives_ui: HBoxContainer = $VBox/LivesUI
 
-
-
 var score: int = 0 
 var lives: int = 3
 

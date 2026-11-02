@@ -5,7 +5,7 @@ const BULLET = preload("res://Bullet/Bullet.tscn")
 @onready var timer: Timer = $Timer
 @onready var fire_timer: Timer = $FireTimer
 
-var speed: float = 200.0 # px /sec.
+var speed: float = 100.0 # px /sec.
 var velocity_y: float = 0.0
 
 func _ready() -> void:
