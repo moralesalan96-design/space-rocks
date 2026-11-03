@@ -10,6 +10,7 @@ var velocity_y: float = 0.0
 
 func _ready() -> void:
 	timer.timeout.connect(on_timeout)
+	
 	var viewport = get_viewport(). size
 	if position.x > viewport.x - viewport.x / 2:
 		speed *= -1

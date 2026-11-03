@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bovuvgb2fysqb" path="res://PlayerUI/assets/life.tscn" id="2_4n4wi"]
 
 [node name="PlayerUI" type="PanelContainer" unique_id=1997977121]
-anchors_preset = -1
-anchor_left = 0.45800003
-anchor_right = 0.45800003
-offset_left = -43.000015
-offset_right = 156.99998
-offset_bottom = 93.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.0
+offset_right = 66.0
+offset_bottom = 91.0
 grow_horizontal = 2
 script = ExtResource("1_4n4wi")
 

@@ -1,6 +1,8 @@
 extends ScreenWrapper
 class_name Rock
 
+#self.call_deferred("qeue_free")
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var main: Main
@@ -23,6 +25,7 @@ func _process(delta: float) -> void:
 ## Collison function. 
 func on_area_entered(other_area: Area2D):
 	if other_area is Bullet:
-		main.just_score(1, other_area.player)
+		if other_area.player != null:
+			main.just_score(1, other_area.player)
 		other_area.queue_free()
 		queue_free()

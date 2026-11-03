@@ -1,21 +1,36 @@
 extends PanelContainer
+class_name PauseMenu
 
 @onready var play_button: Button = $VBox/PlayButton
 @onready var quit_button: Button = $VBox/QuitButton
+@onready var continue_button: Button = $VBox/ContinueButton
+
+var main: Main = null 
 
 func _ready() -> void:
 	play_button.pressed.connect(on_play_pressed)
+	continue_button.pressed.connect(on_continue_pressed)
 	quit_button.pressed.connect(on_quit_pressed)
+	
+	main = get_parent()
 	show()
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
-		# FIXME: Not pausing, testing with quit().
-		#get_tree().paused = true
-		get_tree().quit()
-		
+		get_tree().paused = not get_tree().paused
+		if get_tree().paused:
+			show()
+		else:
+			hide()
+
 func on_play_pressed():
-	print("play")
+	main.spawn_rocks()
+	main.spawn_player()
+	hide()
+	
+func on_continue_pressed():
+	get_tree().paused = false
+	hide()
 	
 func on_quit_pressed():
-	print("quit")
+	get_tree().quit()

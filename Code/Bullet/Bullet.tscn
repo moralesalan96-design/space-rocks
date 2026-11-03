@@ -8,4 +8,5 @@
 script = ExtResource("1_qratc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=811632355]
+position = Vector2(89, 71)
 shape = SubResource("CapsuleShape2D_ejki1")

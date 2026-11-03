@@ -12,6 +12,5 @@ visible = false
 position = Vector2(228, 332)
 
 [node name="UfoTimer" type="Timer" parent="." unique_id=1227431596]
-autostart = true
 
 [node name="PauseMenu" parent="." unique_id=2038147437 instance=ExtResource("3_amygn")]
