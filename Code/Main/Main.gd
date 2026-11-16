@@ -5,7 +5,7 @@ const UfO = preload("res://UFO/UFO.tscn")
 const ROCK = preload("res://Rock/Rock.tscn")
 const PLAYER_UI = preload("res://PlayerUI/PlayerUI.tscn")
 
-@onready var pause_menu: PauseMenu = $PauseMenu
+@onready var pause_menu = $PauseMenu
 @onready var ufo_timer: Timer = $UfoTimer
 
 var players: Array[PlayerUI]
@@ -54,5 +54,6 @@ func start_new_round():
 	spawn_rocks()
 
 func check_round_over():
-	if rocks.size() <= 0:
-		next_round()
+	#if rocks.size() <= 0:
+		#next_round()
+		print("Check Game Over")

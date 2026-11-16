@@ -1,10 +1,9 @@
 extends PanelContainer
-class_name PauseMenu
+class_name PauseMenuX
 
 @onready var play_button: Button = $VBox/PlayButton
 @onready var quit_button: Button = $VBox/QuitButton
 @onready var continue_button: Button = $VBox/ContinueButton
-@onready var quit_button: Button = $VBox/QuitButton
 
 var main: Main = null 
 

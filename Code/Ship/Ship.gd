@@ -1,7 +1,7 @@
 extends ScreenWrapper
 class_name Ship
 
-const BULLET = preload("res://Bullet/Bull.tscn")
+const BULLET = preload("res://Bullet/Bullet.tscn")
 
 var player: PlayerUI
 
