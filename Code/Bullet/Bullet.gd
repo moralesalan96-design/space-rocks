@@ -1,7 +1,7 @@
 extends ScreenWrapper
 class_name Bullet
 
-var player: PlayerUI = null
+var player
 
 var speed: float = 600.0 #px / sec.
 var lifespan: float = 2.0 # seconds till end. 
